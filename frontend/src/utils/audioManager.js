@@ -128,5 +128,6 @@ class AudioManager {
         oscillator.stop(audioContext.currentTime + 0.1);
     }
 }
+const audioManager = new AudioManager();
+export default audioManager;
 
-export default new AudioManager();
