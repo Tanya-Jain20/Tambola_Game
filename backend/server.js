@@ -29,6 +29,16 @@ const io = socketIo(server, {
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json({ 
+        status: 'Tambola backend LIVE!', 
+        mongodb: 'connected',
+        socketio: 'ready',
+        url: 'https://tambola-backend-50a6.onrender.com',
+        timestamp: new Date().toISOString()
+    });
+});
+
 // MongoDB connection
 if (process.env.MONGODB_URI) {
     mongoose
