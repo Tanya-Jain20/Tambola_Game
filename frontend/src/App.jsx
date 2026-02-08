@@ -13,7 +13,7 @@ import HelpModal from './components/HelpModal';
 import audioManager from './utils/audioManager';
 import { useRef } from 'react';
 
-const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || 'http://localhost:5000';
+const SOCKET_URL = process.env.REACT_APP_SOCKET_URL || 'https://tambola-backend-50a6.onrender.com';
 
 function App() {
     const [socket, setSocket] = useState(null);
