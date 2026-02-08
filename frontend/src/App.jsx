@@ -54,9 +54,20 @@ function App() {
         playerNameRef.current = playerName;
     }, [playerName]);
 
-    useEffect(() => {
-        const newSocket = io(SOCKET_URL);
-        setSocket(newSocket);
+  useEffect(() => {
+    const newSocket = io(SOCKET_URL, {
+        transports: ['websocket', 'polling'],
+        secure: true,
+        path: '/socket.io/',
+        reconnection: true,
+        reconnectionAttempts: 5
+    });
+    setSocket(newSocket);
+
+    // DEBUG - Add these 3 lines to see connection status
+    newSocket.on('connect', () => console.log('✅ Socket CONNECTED:', newSocket.id));
+    newSocket.on('connect_error', (err) => console.log('❌ Socket ERROR:', err.message));
+    newSocket.on('disconnect', (reason) => console.log('🔌 Socket DISCONNECTED:', reason));
 
         // Room created
         newSocket.on('roomCreated', (data) => {
