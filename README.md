@@ -1,9 +1,13 @@
 # Tambola Game
 
+Welcome to the Tambola Game! This is a fun, interactive game you can play with friends and family.
+
 ## Deployed Link
+You can play the game here: [Tambola Game](https://tambolagame-phi.vercel.app/)
 
-You can access the deployed version of the Tambola Game here: [Deployed Link](https://tambolagame-phi.vercel.app/)
+## Features
+- User-friendly interface
+- Online play option
 
-## Introduction
-
-Tambola is a game based on the original Indian game of Housie. Enjoy playing with friends and family!
+## How to Play
+...
