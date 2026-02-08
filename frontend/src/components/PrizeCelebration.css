@@ -1,0 +1,196 @@
+.prize-celebration-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.celebration-content {
+    text-align: center;
+    position: relative;
+}
+
+.confetti {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle, #fbbf24 20%, transparent 20%),
+        radial-gradient(circle, #f59e0b 20%, transparent 20%),
+        radial-gradient(circle, #4ade80 20%, transparent 20%),
+        radial-gradient(circle, #22c55e 20%, transparent 20%),
+        radial-gradient(circle, #667eea 20%, transparent 20%),
+        radial-gradient(circle, #764ba2 20%, transparent 20%);
+    background-size: 10% 10%;
+    background-position: 0% 0%, 20% 10%, 40% 5%, 60% 15%, 80% 0%, 100% 10%;
+    animation: confettiFall 3s ease-out;
+    pointer-events: none;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateX(-50%) translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(800px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.trophy-icon {
+    font-size: 8rem;
+    animation: bounce 1s infinite, rotate 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+}
+
+.winner-name {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    animation: glow 1.5s infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.8));
+    }
+}
+
+.prize-name {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.points-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4ade80;
+    margin-bottom: 30px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.celebration-message {
+    font-size: 2rem;
+    color: #fff;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.countdown-display {
+    text-align: center;
+}
+
+.countdown-text {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.countdown-number {
+    font-size: 10rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: countdownPulse 1s ease-in-out;
+}
+
+@keyframes countdownPulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

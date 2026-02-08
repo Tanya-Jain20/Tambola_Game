@@ -1,0 +1,92 @@
+.prize-tracker {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.prize-tracker h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.prize-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.prize-item {
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.prize-item.available {
+    border-color: rgba(251, 191, 36, 0.5);
+}
+
+.prize-item.claimed {
+    border-color: rgba(74, 222, 128, 0.5);
+    background: rgba(74, 222, 128, 0.1);
+}
+
+.prize-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.prize-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.prize-points {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.prize-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge.available {
+    background: rgba(251, 191, 36, 0.3);
+    color: #fbbf24;
+}
+
+.status-badge.won {
+    background: rgba(74, 222, 128, 0.3);
+    color: #4ade80;
+}
+
+.winner-name {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.count-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
